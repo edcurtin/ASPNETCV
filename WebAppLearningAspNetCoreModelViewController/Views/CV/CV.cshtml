@@ -1,0 +1,52 @@
+﻿
+
+@model WebAppLearningAspNetCoreModelViewController.Models.CVViewModel
+
+<div class="cv-title">
+<h2>Curriculum Vitae</h2>
+<h3>Ed Curtin</h3>
+</div>
+
+<div>
+    <table class="table-custom">
+        <tr>
+            <td class="table-custom-label">Email:</td>
+            <td class="table-custom-content">@Model.Email</td>
+        </tr>
+        <tr>
+            <td class="table-custom-label">Phone:</td>
+            <td class="table-custom-content">@Model.Phone</td>
+        </tr>
+        <tr>
+            <td class="table-custom-label"> LinkedIn:</td>
+            <td class="table-custom-content"><a href="@Model.LinkedIn">@Model.LinkedIn</a></td>
+        </tr>
+        <tr>
+            <td class="table-custom-label">Working Model:</td>
+            <td class="table-custom-content">@Model.WorkingModel</td>
+        </tr>
+    </table>
+
+    <section id="employment">
+        <ul>
+            @foreach (var experience in Model.WorkExperiences)
+            {
+                <li>
+                    @await Html.PartialAsync("WorkExperience", experience)
+                </li>
+            }
+        </ul>
+    </section>
+    <section id="education">
+        <h4>Education</h4>
+        <ul>
+            @foreach (var education in Model.Educations)
+            {
+                <li>
+                     @await Html.PartialAsync("EducationExperience", education)
+                </li>
+            }
+        </ul>
+    </section>
+  
+</div>

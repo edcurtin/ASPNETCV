@@ -1,0 +1,67 @@
+﻿@model WebAppLearningAspNetCoreModelViewController.Models.Education
+
+<table class="table-custom">
+    <tr>
+        <td class="table-custom-label">Dates:</td>
+        <td class="table-custom-content">@Model.Dates</td>
+    </tr>
+    <tr>
+        <td class="table-custom-label">University:</td>
+        <td class="table-custom-content">@Model.Institution</td>
+    </tr>
+    <tr>
+        <td class="table-custom-label">Course:</td>
+        <td class="table-custom-content">@Model.CourseName</td>
+    </tr>
+    <tr>
+        <td class="table-custom-label">Grade:</td>
+        <td class="table-custom-content">@Model.Grade</td>
+    </tr>
+
+    @if(Model.Project != null)
+    {
+ 
+        <tr>
+            <td class="table-custom-label">Final Year Project:</td>
+            <td class="table-custom-content">@Model.Project.Name</td>
+        </tr>
+        <tr>
+            <td class="table-custom-label table-custom-label-vertical">Description:</td>
+            <td class="table-custom-content table-custom-justify table-custom-margin">
+                @Model.Project.Description
+            </td>
+        </tr>
+    }
+
+    <tr>
+        <td class="table-custom-label table-custom-label-vertical">Results:</td>
+        <td>
+            <div class="table-wrapper">
+                @foreach (var x in Model.Semesters)
+                {
+                    <div class="table-container">
+                        <table class="table-custom-education">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">@x.Name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var y in x.Results)
+                                {
+                                    <tr>
+                                        <td class="table-custom-education-label">@y.Subject</td>
+                                        <td class="table-custom-education-content">@y.Result</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+

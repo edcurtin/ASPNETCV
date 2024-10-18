@@ -1,0 +1,135 @@
+﻿ul {
+    list-style-type: none; /* Removes bullet points from unordered lists */
+    padding: 0; /* Removes padding */
+    margin: 0; /* Removes margin */
+}
+
+.navbar {
+    position: fixed; /* Fix the navbar to the left side */
+    z-index: 1000;
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    height: 100%; /* Make it full height */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center the list */
+}
+
+.navbar-nav .nav-item {
+    display: flex; /* Ensure each nav item is displayed as a block */
+    align-items: center;
+}
+
+/* Style for the nav links */
+.nav-link {
+    display: block; /* Make links block elements */
+    color: white; /* Text color */
+    font-size: 30px;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+    /* Remove hover effect for nav links */
+    .nav-link:hover {
+        background-color: transparent; /* Ensure no background color */
+        color: white; /* Maintain the original text color */
+        text-decoration: none; /* Optional: Remove underline */
+    }
+
+    /* Prevent focus styles if necessary */
+    .nav-link:focus {
+        outline: none; /* Remove outline on focus */
+    }
+
+    /* Prevent visited link color */
+    .nav-link:visited {
+        color: white; /* Keep the text color for visited links */
+    }
+
+    /* Prevent active link color */
+    .nav-link:active {
+        color: white; /* Keep the text color for active links */
+    }
+
+.cv-title {
+    margin-bottom: 20px;
+    text-align: left;
+    border-bottom: 2px solid white; /* Adds a solid line under the div */
+    padding-bottom: 5px;
+}
+
+
+.horizontal-list {
+    display: flex; /* Flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allows items to wrap if they overflow */
+    justify-content: flex-start; /* Ensures left alignment */
+    padding: 0;
+    list-style: none; /* Remove default list styling */
+    margin: 0;
+}
+
+    .horizontal-list li {
+        margin-right: 10px; /* Add space between items */
+        background-color: black; /* Ensure list items have a black background */
+        color: white; /* Set list item text color to white */
+    }
+
+
+.table-custom {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse; /* Ensures cells are spaced evenly */
+    margin-bottom: 10px;
+}
+
+.table-custom-label-vertical{
+    vertical-align: top;
+}
+
+.table-custom-content {
+    width: 80%;
+}
+
+.table-custom-justify {
+    text-align: justify;
+}
+
+.table-custom-margin {
+    padding: 0px 0px 10px 0px;
+}
+
+.table-wrapper {
+    display: flex; /* Enables flexbox layout */
+    justify-content: left; /* Aligns the tables with some space between them */
+    flex-wrap: nowrap; /* Ensures tables wrap if needed */
+    font-size: 14px;
+}
+
+.table-container {
+    display: block;
+    width: 49%; /* Ensure each table takes almost half the space, leaving some room between */
+    margin-right: 1%; /* Adds space between the tables */
+    box-sizing: border-box; /* Ensures padding/border doesn't exceed the width */
+}
+
+.table-custom-education {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse; /* Ensures cells are spaced evenly */
+    margin-bottom: 10px;
+}
+
+.table-custom-education-label {
+    width: 70%; /* Adjust based on need */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Cut off long content */
+}
+
+.table-custom-education-content {
+    width: 30%; /* Adjust based on need */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Cut off long content */
+}

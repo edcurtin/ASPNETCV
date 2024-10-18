@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppLearningAspNetCoreModelViewController", "WebAppLearningAspNetCoreModelViewController\WebAppLearningAspNetCoreModelViewController.csproj", "{D116F707-C02D-43B3-800D-AF33D3EE9DAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D116F707-C02D-43B3-800D-AF33D3EE9DAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D116F707-C02D-43B3-800D-AF33D3EE9DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D116F707-C02D-43B3-800D-AF33D3EE9DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D116F707-C02D-43B3-800D-AF33D3EE9DAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C795861-82C5-48AE-BB22-7C5A844110CC}
+	EndGlobalSection
+EndGlobal

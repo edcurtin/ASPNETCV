@@ -1,0 +1,46 @@
+﻿@model WebAppLearningAspNetCoreModelViewController.Models.Experience  
+
+
+@if (@Model.IsCurrent.HasValue)
+{
+    if (@Model.IsCurrent.Value)
+    {
+        <h4>Current Employment</h4>
+    }
+    else
+    {
+        <h4>Previous Employment</h4>
+    }
+}
+
+<table class="table-custom">
+    <tr>
+        <td class="table-custom-label">Role:</td>
+        <td class="table-custom-content">@Model.Role</td>
+    </tr>
+    <tr>
+        <td class="table-custom-label">Company:</td>
+        <td class="table-custom-content">@Model.Company</td>
+    </tr>
+    <tr>
+        <td class="table-custom-label">Dates:</td>
+        <td class="table-custom-content">@Model.Dates</td>
+    </tr>
+    <tr>
+        <td class="table-custom-label table-custom-label-vertical">Tech Used:</td>
+        <td class="table-custom-content">
+            <ul class="horizontal-list">
+                @foreach (var tech in Model.TechUsed)
+                {
+                    <li>@tech.Name</li>
+                }
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td class="table-custom-label table-custom-label-vertical" >Description:</td>
+        <td class="table-custom-content table-custom-justify">
+            @Model.Description
+        </td>
+    </tr>
+</table>
